@@ -6,64 +6,19 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>478</width>
-    <height>354</height>
+    <width>460</width>
+    <height>381</height>
    </rect>
   </property>
   <property name="windowTitle">
-   <string>Form</string>
+   <string>IMAGE EDITOR</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="icons.qrc">
+    <normaloff>:/icons/icons/Crab.ico</normaloff>:/icons/icons/Crab.ico</iconset>
   </property>
   <layout class="QGridLayout" name="gridLayout">
-   <item row="5" column="1" colspan="3">
-    <widget class="QPushButton" name="pushButton_resize">
-     <property name="text">
-      <string>RESIZE</string>
-     </property>
-    </widget>
-   </item>
-   <item row="8" column="0">
-    <widget class="QPushButton" name="pushButton_reset">
-     <property name="text">
-      <string>DISCARD CHANGES</string>
-     </property>
-    </widget>
-   </item>
-   <item row="8" column="1" colspan="3">
-    <widget class="QPushButton" name="pushButton_exit">
-     <property name="text">
-      <string>EXIT</string>
-     </property>
-    </widget>
-   </item>
-   <item row="7" column="1" colspan="3">
-    <widget class="QPushButton" name="pushButton_save">
-     <property name="text">
-      <string>SAVE</string>
-     </property>
-    </widget>
-   </item>
-   <item row="6" column="1" colspan="3">
-    <widget class="QPushButton" name="pushButton_liquid">
-     <property name="text">
-      <string>LIQUID</string>
-     </property>
-    </widget>
-   </item>
-   <item row="1" column="1" colspan="3">
-    <widget class="QPushButton" name="pushButton_edges">
-     <property name="text">
-      <string>EDGES</string>
-     </property>
-    </widget>
-   </item>
-   <item row="0" column="1" colspan="3">
-    <widget class="QPushButton" name="pushButton_gray">
-     <property name="text">
-      <string>TO GRAY</string>
-     </property>
-    </widget>
-   </item>
-   <item row="0" column="0" rowspan="7">
+   <item row="0" column="0" rowspan="9" colspan="2">
     <widget class="QScrollArea" name="scrollArea_image">
      <property name="widgetResizable">
       <bool>true</bool>
@@ -73,39 +28,35 @@
        <rect>
         <x>0</x>
         <y>0</y>
-        <width>377</width>
-        <height>244</height>
+        <width>359</width>
+        <height>310</height>
        </rect>
       </property>
      </widget>
     </widget>
    </item>
-   <item row="3" column="1" colspan="3">
-    <widget class="QPushButton" name="pushButton_hmirror">
+   <item row="0" column="2" colspan="2">
+    <widget class="QPushButton" name="pushButton_gray">
      <property name="text">
-      <string>MIRROR</string>
-     </property>
-     <property name="icon">
-      <iconset resource="icons.qrc">
-       <normaloff>:/icons/icons/v_mirror.ico</normaloff>:/icons/icons/v_mirror.ico</iconset>
+      <string>TO GRAY</string>
      </property>
     </widget>
    </item>
-   <item row="4" column="1" colspan="3">
-    <widget class="QPushButton" name="pushButton_vmirror">
+   <item row="1" column="2" colspan="2">
+    <widget class="QPushButton" name="pushButton_edges">
      <property name="text">
-      <string>MIRROR</string>
-     </property>
-     <property name="icon">
-      <iconset resource="icons.qrc">
-       <normaloff>:/icons/icons/h_mirror.ico</normaloff>:/icons/icons/h_mirror.ico</iconset>
+      <string>EDGES</string>
      </property>
     </widget>
    </item>
-   <item row="7" column="0">
-    <widget class="QCheckBox" name="checkBox_prev">
+   <item row="2" column="2">
+    <widget class="QToolButton" name="toolButton_counter">
      <property name="text">
-      <string>Previev</string>
+      <string>COUNTER</string>
+     </property>
+     <property name="icon">
+      <iconset resource="icons.qrc">
+       <normaloff>:/icons/icons/counter.ico</normaloff>:/icons/icons/counter.ico</iconset>
      </property>
     </widget>
    </item>
@@ -120,14 +71,67 @@
      </property>
     </widget>
    </item>
-   <item row="2" column="1" colspan="2">
-    <widget class="QToolButton" name="toolButton_counter">
+   <item row="3" column="2" colspan="2">
+    <widget class="QPushButton" name="pushButton_hmirror">
      <property name="text">
-      <string>COUNTER</string>
+      <string>MIRROR</string>
      </property>
      <property name="icon">
       <iconset resource="icons.qrc">
-       <normaloff>:/icons/icons/counter.ico</normaloff>:/icons/icons/counter.ico</iconset>
+       <normaloff>:/icons/icons/v_mirror.ico</normaloff>:/icons/icons/v_mirror.ico</iconset>
+     </property>
+    </widget>
+   </item>
+   <item row="4" column="2" colspan="2">
+    <widget class="QPushButton" name="pushButton_vmirror">
+     <property name="text">
+      <string>MIRROR</string>
+     </property>
+     <property name="icon">
+      <iconset resource="icons.qrc">
+       <normaloff>:/icons/icons/h_mirror.ico</normaloff>:/icons/icons/h_mirror.ico</iconset>
+     </property>
+    </widget>
+   </item>
+   <item row="5" column="2" colspan="2">
+    <widget class="QPushButton" name="pushButton_resize">
+     <property name="text">
+      <string>RESIZE</string>
+     </property>
+    </widget>
+   </item>
+   <item row="6" column="2" colspan="2">
+    <widget class="QPushButton" name="pushButton_liquid">
+     <property name="text">
+      <string>LIQUID</string>
+     </property>
+    </widget>
+   </item>
+   <item row="7" column="2" colspan="2">
+    <widget class="QPushButton" name="pushButton_save">
+     <property name="text">
+      <string>SAVE</string>
+     </property>
+    </widget>
+   </item>
+   <item row="8" column="2" colspan="2">
+    <widget class="QPushButton" name="pushButton_reset">
+     <property name="text">
+      <string>RESET</string>
+     </property>
+    </widget>
+   </item>
+   <item row="9" column="0">
+    <widget class="QCheckBox" name="checkBox_prev">
+     <property name="text">
+      <string>Previev</string>
+     </property>
+    </widget>
+   </item>
+   <item row="9" column="1">
+    <widget class="QLabel" name="label_size">
+     <property name="text">
+      <string>TextLabel</string>
      </property>
     </widget>
    </item>

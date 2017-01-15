@@ -1,5 +1,5 @@
 #include "androidfiledialog.h"
-
+/*
 AndroidFileDialog::ResultReceiver::ResultReceiver(AndroidFileDialog *dialog) : _dialog(dialog) {}
 AndroidFileDialog::ResultReceiver::~ResultReceiver() {}
 
@@ -57,4 +57,4 @@ bool AndroidFileDialog::provideExistingFileName()
 void AndroidFileDialog::emitExistingFileNameReady(QString result)
 {
     emit existingFileNameReady(result);
-}
+}*/

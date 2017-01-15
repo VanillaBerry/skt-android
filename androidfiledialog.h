@@ -1,10 +1,10 @@
 #ifndef ANDROIDFILEDIALOG_H
 #define ANDROIDFILEDIALOG_H
 
-#include <QObject>
-/*#include <QAndroidJniObject>
-#include <QtAndroid>
-#include <QAndroidActivityResultReceiver>
+#include <QObject>/*
+//#include <QAndroidJniObject>
+//#include <QtAndroid>
+//#include <QAndroidActivityResultReceiver>
 
 class AndroidFileDialog : public QObject
 {
@@ -31,6 +31,6 @@ private:
 
 signals:
     void existingFileNameReady(QString result);
-};
+};*/
 
 #endif // ANDROIDFILEDIALOG_H

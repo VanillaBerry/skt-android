@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>480</width>
-    <height>640</height>
+    <width>252</width>
+    <height>111</height>
    </rect>
   </property>
   <property name="sizePolicy">
@@ -45,118 +45,38 @@
    <property name="autoFillBackground">
     <bool>false</bool>
    </property>
-   <widget class="QWidget" name="verticalLayoutWidget">
-    <property name="geometry">
-     <rect>
-      <x>10</x>
-      <y>10</y>
-      <width>261</width>
-      <height>131</height>
-     </rect>
-    </property>
-    <layout class="QVBoxLayout" name="verticalLayout">
-     <item>
-      <layout class="QHBoxLayout" name="horizontalLayout_2">
-       <property name="leftMargin">
-        <number>9</number>
-       </property>
-      </layout>
-     </item>
-     <item>
-      <widget class="QLabel" name="label">
-       <property name="layoutDirection">
-        <enum>Qt::RightToLeft</enum>
-       </property>
-       <property name="text">
-        <string>DATABASE</string>
-       </property>
-       <property name="alignment">
-        <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
-       </property>
-      </widget>
-     </item>
-     <item>
-      <widget class="QTextBrowser" name="textBrowser"/>
-     </item>
-    </layout>
-   </widget>
-   <widget class="QWidget" name="verticalLayoutWidget_2">
-    <property name="geometry">
-     <rect>
-      <x>10</x>
-      <y>150</y>
-      <width>261</width>
-      <height>281</height>
-     </rect>
-    </property>
-    <layout class="QVBoxLayout" name="verticalLayout_2">
-     <item>
-      <widget class="QLabel" name="label_2">
-       <property name="text">
-        <string>TOPICS</string>
-       </property>
-       <property name="alignment">
-        <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
-       </property>
-      </widget>
-     </item>
-     <item>
-      <widget class="QKeySequenceEdit" name="keySequenceEdit"/>
-     </item>
-    </layout>
-   </widget>
-   <widget class="QWidget" name="verticalLayoutWidget_3">
-    <property name="geometry">
-     <rect>
-      <x>280</x>
-      <y>10</y>
-      <width>341</width>
-      <height>421</height>
-     </rect>
-    </property>
-    <layout class="QVBoxLayout" name="verticalLayout_3"/>
-   </widget>
+   <layout class="QGridLayout" name="gridLayout">
+    <item row="0" column="0">
+     <widget class="QPushButton" name="pushButton_newimg">
+      <property name="text">
+       <string>ANOTHER IMG</string>
+      </property>
+     </widget>
+    </item>
+    <item row="1" column="0">
+     <widget class="QPushButton" name="pushButton_Exit">
+      <property name="text">
+       <string>EXIT</string>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>16</width>
+        <height>16</height>
+       </size>
+      </property>
+     </widget>
+    </item>
+   </layout>
   </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>480</width>
-     <height>20</height>
+     <width>252</width>
+     <height>21</height>
     </rect>
    </property>
-   <widget class="QMenu" name="main_menu">
-    <property name="geometry">
-     <rect>
-      <x>362</x>
-      <y>100</y>
-      <width>207</width>
-      <height>119</height>
-     </rect>
-    </property>
-    <property name="title">
-     <string>Main</string>
-    </property>
-    <addaction name="separator"/>
-    <addaction name="separator"/>
-    <addaction name="main_b01"/>
-    <addaction name="actionG2"/>
-    <addaction name="main_exit"/>
-   </widget>
-   <widget class="QMenu" name="menuDatabase">
-    <property name="title">
-     <string>Database</string>
-    </property>
-   </widget>
-   <widget class="QMenu" name="menuImage_effects">
-    <property name="title">
-     <string>Image effects</string>
-    </property>
-   </widget>
-   <addaction name="main_menu"/>
-   <addaction name="menuDatabase"/>
-   <addaction name="menuImage_effects"/>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
   <action name="main_b01">

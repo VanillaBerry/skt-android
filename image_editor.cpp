@@ -11,6 +11,7 @@ image_editor::image_editor(QWidget *parent) :
 {
     ui->setupUi(this);
     ui->scrollArea_image->hide();
+
     prev=false;
 
     connect(ui->pushButton_gray, SIGNAL (released()), this, SLOT (handleButton_Gray()));
@@ -23,9 +24,10 @@ image_editor::image_editor(QWidget *parent) :
     connect(ui->pushButton_save, SIGNAL (released()), this, SLOT (handleButton_Save()));
     connect(ui->pushButton_resize, SIGNAL (released()), this, SLOT (handleButton_Resize()));
     connect(ui->pushButton_liquid, SIGNAL (released()), this, SLOT (handleButton_Liquid()));
-    connect(ui->pushButton_exit, SIGNAL (released()), this, SLOT (handleButton_Exit()));
 
     connect(ui->checkBox_prev, SIGNAL (clicked()), this, SLOT (handleCheck_Prev()));
+
+    ui->label_size->hide();
 
 /*    toolButton->setIcon(QPixmap(":/media/instruments-icons/cursor.png"));*/
 
@@ -87,6 +89,10 @@ void image_editor::handleButton_Vmirror(){
 
 void image_editor::handleButton_Save(){
     img_old=img_new;
+    refresh();
+
+    QString newstr= str.left(str.length()-4) +"_new.jpg";
+    img_old.save(newstr,0,100);
 };
 
 void image_editor::handleButton_Resize(){
@@ -149,6 +155,11 @@ void image_editor::refresh(){
     imagelabel->setPixmap(QPixmap::fromImage(img_new, Qt::AutoColor));
     else
     imagelabel->setPixmap(QPixmap::fromImage(img_old, Qt::AutoColor));
+
+    QString str = "Current size is " + QString::number(img_old.width());
+    str+="x"+QString::number(img_old.height());
+    ui->label_size->setText(str);
+    ui->label_size->show();
 };
 
 void image_editor::handleCheck_Prev(){
@@ -156,6 +167,6 @@ void image_editor::handleCheck_Prev(){
     refresh();
 };
 
-void image_editor::handleButton_Exit(){
-
+void image_editor::setLocation(QString strng){
+     str=strng;
 };

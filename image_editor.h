@@ -17,6 +17,7 @@ public:
     ~image_editor();
 
 void setImage(QImage img_orig);
+void setLocation(QString str);
 
 private:
     QLabel *imagelabel;
@@ -24,6 +25,7 @@ private:
     QImage img_new;
     QImage img_old;
     bool prev;
+    QString str;
 
 void refresh();
 
@@ -39,7 +41,6 @@ void handleButton_Vmirror();
 void handleButton_Save();
 void handleButton_Resize();
 void handleButton_Liquid();
-void handleButton_Exit();
 void handleCheck_Prev();
 
 };
