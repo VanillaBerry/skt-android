@@ -6,26 +6,7 @@
 #include <QFileDialog>
 #include "QObject"
 
-//#include <QAndroidJniObject>
-//#include "androidfiledialog.h"
 #include <QMessageBox>
-
-/*QString filepath(){
-     QAndroidJniObject jb = QAndroidJniObject::callStaticObjectMethod
-            ("android/dialogs/MyPath"
-             ,"getPath", "()Ljava/lang/String");
-     QString str = jb.toString();
-
-
-     return str;
-};*/
-
-    /*return QAndroidJniObject::callStaticMethod<jint>
-(”com/kdab/training/MyJavaClass” // class name
-, ”fibonacci” // method name
-, ”(I)I” // signature
-, n);*/
-/*};*/
 
 int main(int argc, char *argv[])
 {

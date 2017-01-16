@@ -6,19 +6,61 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>460</width>
-    <height>381</height>
+    <width>322</width>
+    <height>397</height>
    </rect>
   </property>
   <property name="windowTitle">
-   <string>IMAGE EDITOR</string>
-  </property>
-  <property name="windowIcon">
-   <iconset resource="icons.qrc">
-    <normaloff>:/icons/icons/Crab.ico</normaloff>:/icons/icons/Crab.ico</iconset>
+   <string>Form</string>
   </property>
   <layout class="QGridLayout" name="gridLayout">
-   <item row="0" column="0" rowspan="9" colspan="2">
+   <item row="19" column="7">
+    <spacer name="horizontalSpacer_2">
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+     <property name="sizeHint" stdset="0">
+      <size>
+       <width>40</width>
+       <height>20</height>
+      </size>
+     </property>
+    </spacer>
+   </item>
+   <item row="20" column="6" colspan="2">
+    <spacer name="horizontalSpacer">
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+     <property name="sizeHint" stdset="0">
+      <size>
+       <width>40</width>
+       <height>20</height>
+      </size>
+     </property>
+    </spacer>
+   </item>
+   <item row="11" column="9">
+    <spacer name="verticalSpacer">
+     <property name="orientation">
+      <enum>Qt::Vertical</enum>
+     </property>
+     <property name="sizeHint" stdset="0">
+      <size>
+       <width>20</width>
+       <height>40</height>
+      </size>
+     </property>
+    </spacer>
+   </item>
+   <item row="19" column="0" colspan="3">
+    <widget class="QPushButton" name="pushButton_resize">
+     <property name="text">
+      <string>RESIZE</string>
+     </property>
+    </widget>
+   </item>
+   <item row="0" column="0" rowspan="17" colspan="9">
     <widget class="QScrollArea" name="scrollArea_image">
      <property name="widgetResizable">
       <bool>true</bool>
@@ -28,39 +70,57 @@
        <rect>
         <x>0</x>
         <y>0</y>
-        <width>359</width>
-        <height>310</height>
+        <width>257</width>
+        <height>319</height>
        </rect>
       </property>
      </widget>
     </widget>
    </item>
-   <item row="0" column="2" colspan="2">
-    <widget class="QPushButton" name="pushButton_gray">
+   <item row="20" column="8" colspan="2">
+    <widget class="QPushButton" name="pushButton_reset">
      <property name="text">
-      <string>TO GRAY</string>
+      <string>RESET</string>
      </property>
     </widget>
    </item>
-   <item row="1" column="2" colspan="2">
-    <widget class="QPushButton" name="pushButton_edges">
+   <item row="20" column="0">
+    <widget class="QCheckBox" name="checkBox_prev">
      <property name="text">
-      <string>EDGES</string>
+      <string>Previev</string>
      </property>
     </widget>
    </item>
-   <item row="2" column="2">
-    <widget class="QToolButton" name="toolButton_counter">
+   <item row="12" column="9">
+    <widget class="QPushButton" name="pushButton_zoomIN">
      <property name="text">
-      <string>COUNTER</string>
+      <string/>
      </property>
      <property name="icon">
       <iconset resource="icons.qrc">
-       <normaloff>:/icons/icons/counter.ico</normaloff>:/icons/icons/counter.ico</iconset>
+       <normaloff>:/icons/icons/magnifier--plus.ico</normaloff>:/icons/icons/magnifier--plus.ico</iconset>
      </property>
     </widget>
    </item>
-   <item row="2" column="3">
+   <item row="13" column="9">
+    <widget class="QPushButton" name="pushButton_zoomOUT">
+     <property name="text">
+      <string/>
+     </property>
+     <property name="icon">
+      <iconset resource="icons.qrc">
+       <normaloff>:/icons/icons/magnifier--minus.ico</normaloff>:/icons/icons/magnifier--minus.ico</iconset>
+     </property>
+    </widget>
+   </item>
+   <item row="19" column="4" colspan="2">
+    <widget class="QPushButton" name="pushButton_liquid">
+     <property name="text">
+      <string>LIQUID</string>
+     </property>
+    </widget>
+   </item>
+   <item row="10" column="9">
     <widget class="QToolButton" name="toolButton_clockwise">
      <property name="text">
       <string>CLOCKWISE</string>
@@ -69,12 +129,68 @@
       <iconset resource="icons.qrc">
        <normaloff>:/icons/icons/clockwise.ico</normaloff>:/icons/icons/clockwise.ico</iconset>
      </property>
+     <property name="iconSize">
+      <size>
+       <width>32</width>
+       <height>16</height>
+      </size>
+     </property>
     </widget>
    </item>
-   <item row="3" column="2" colspan="2">
+   <item row="19" column="8" colspan="2">
+    <widget class="QPushButton" name="pushButton_save">
+     <property name="text">
+      <string>SAVE</string>
+     </property>
+    </widget>
+   </item>
+   <item row="9" column="9">
+    <widget class="QToolButton" name="toolButton_counter">
+     <property name="text">
+      <string>COUNTER</string>
+     </property>
+     <property name="icon">
+      <iconset resource="icons.qrc">
+       <normaloff>:/icons/icons/counter.ico</normaloff>:/icons/icons/counter.ico</iconset>
+     </property>
+     <property name="iconSize">
+      <size>
+       <width>32</width>
+       <height>16</height>
+      </size>
+     </property>
+    </widget>
+   </item>
+   <item row="8" column="9">
+    <spacer name="verticalSpacer_2">
+     <property name="orientation">
+      <enum>Qt::Vertical</enum>
+     </property>
+     <property name="sizeHint" stdset="0">
+      <size>
+       <width>20</width>
+       <height>40</height>
+      </size>
+     </property>
+    </spacer>
+   </item>
+   <item row="14" column="9">
+    <spacer name="verticalSpacer_3">
+     <property name="orientation">
+      <enum>Qt::Vertical</enum>
+     </property>
+     <property name="sizeHint" stdset="0">
+      <size>
+       <width>20</width>
+       <height>40</height>
+      </size>
+     </property>
+    </spacer>
+   </item>
+   <item row="1" column="9">
     <widget class="QPushButton" name="pushButton_hmirror">
      <property name="text">
-      <string>MIRROR</string>
+      <string/>
      </property>
      <property name="icon">
       <iconset resource="icons.qrc">
@@ -82,10 +198,10 @@
      </property>
     </widget>
    </item>
-   <item row="4" column="2" colspan="2">
+   <item row="3" column="9">
     <widget class="QPushButton" name="pushButton_vmirror">
      <property name="text">
-      <string>MIRROR</string>
+      <string/>
      </property>
      <property name="icon">
       <iconset resource="icons.qrc">
@@ -93,47 +209,40 @@
      </property>
     </widget>
    </item>
-   <item row="5" column="2" colspan="2">
-    <widget class="QPushButton" name="pushButton_resize">
+   <item row="5" column="9">
+    <widget class="QPushButton" name="pushButton_autoliq">
      <property name="text">
-      <string>RESIZE</string>
+      <string/>
+     </property>
+     <property name="icon">
+      <iconset resource="icons.qrc">
+       <normaloff>:/icons/icons/_0020_Magic-Wand.ico</normaloff>:/icons/icons/_0020_Magic-Wand.ico</iconset>
      </property>
     </widget>
    </item>
-   <item row="6" column="2" colspan="2">
-    <widget class="QPushButton" name="pushButton_liquid">
+   <item row="6" column="9">
+    <widget class="QPushButton" name="pushButton_edges">
      <property name="text">
-      <string>LIQUID</string>
+      <string/>
+     </property>
+     <property name="icon">
+      <iconset resource="icons.qrc">
+       <normaloff>:/icons/icons/Contrast.ico</normaloff>:/icons/icons/Contrast.ico</iconset>
      </property>
     </widget>
    </item>
-   <item row="7" column="2" colspan="2">
-    <widget class="QPushButton" name="pushButton_save">
-     <property name="text">
-      <string>SAVE</string>
+   <item row="4" column="9">
+    <spacer name="verticalSpacer_4">
+     <property name="orientation">
+      <enum>Qt::Vertical</enum>
      </property>
-    </widget>
-   </item>
-   <item row="8" column="2" colspan="2">
-    <widget class="QPushButton" name="pushButton_reset">
-     <property name="text">
-      <string>RESET</string>
+     <property name="sizeHint" stdset="0">
+      <size>
+       <width>20</width>
+       <height>40</height>
+      </size>
      </property>
-    </widget>
-   </item>
-   <item row="9" column="0">
-    <widget class="QCheckBox" name="checkBox_prev">
-     <property name="text">
-      <string>Previev</string>
-     </property>
-    </widget>
-   </item>
-   <item row="9" column="1">
-    <widget class="QLabel" name="label_size">
-     <property name="text">
-      <string>TextLabel</string>
-     </property>
-    </widget>
+    </spacer>
    </item>
   </layout>
  </widget>
